@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sol_Demo.ImageButtonControl"
+             x:Name="this">
+
+    <Frame
+        BindingContext="{Binding Source={x:Reference this}}"
+        CornerRadius="5"
+        x:Name="myFrame"
+        HorizontalOptions="Start"
+        VerticalOptions="Start"
+        Margin="2"
+        HasShadow="True"
+        Padding="10">
+
+        <StackLayout Orientation="Horizontal" BackgroundColor="Transparent" x:Name="stack">
+
+            <Image x:Name="btnIcon" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start" BackgroundColor="Transparent" Source="{Binding ImageSource}" />
+
+            <Label x:Name="btnText" Text="{Binding ButtonText}" HorizontalOptions="Start" TextColor="{Binding TextColor}" BackgroundColor="Transparent" FontSize="16" />
+        </StackLayout>
+    </Frame>
+</ContentView>

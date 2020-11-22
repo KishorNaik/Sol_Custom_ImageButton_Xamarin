@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Sol_Demo"
+             xmlns:vm="clr-namespace:Sol_Demo.ViewModels"
+             x:Class="Sol_Demo.MainPage"
+             x:Name="this">
+
+    <ContentPage.BindingContext>
+        <vm:MainPageViewModel></vm:MainPageViewModel>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <local:ImageButtonControl
+            ButtonText="Submit"
+            ImageSource="Submit"
+            TextColor="Red"
+
+            Command="{Binding OnCommand}"
+            CommandParameter="{Binding Source={x:Reference this}}"
+            ></local:ImageButtonControl>
+    </StackLayout>
+</ContentPage>
